@@ -10,7 +10,7 @@ import org.reactivestreams.Subscription;
  *
  * Two things are achieved:
  *
- * - request(..) messages become idempotent, which is important for distributed streaming as the original spec implicitely
+ * - request(..) messages become idempotent, which is important for distributed streaming as the original spec
  *   creates distributed state (error prone)
  * - as we talk back from subscriber to publisher anyway, we can add ACK semantics allowing for guaranteed delivers, storage
  *   etc.
