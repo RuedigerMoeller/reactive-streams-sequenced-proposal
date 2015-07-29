@@ -1,12 +1,8 @@
 # reactive-streams-sequenced-proposal
 
 ##Motivation
-- request(..) messages become idempotent, which is important for distributed streaming as the original spec
-creates distributed state (error prone)
-- as we talk back from subscriber to publisher anyway, we can add ACK semantics allowing for guaranteed delivers, storage
-etc.
-
-
+- request(..) messages become idempotent, which is important for distributed streaming as the original spec's credit-alike flow control creates distributed state (error prone)
+- as there is talk back from subscriber to publisher anyway, we can add ACK semantics allowing for guaranteed delivery, storage, retransmission, etc.
 
 Basically adds
 
