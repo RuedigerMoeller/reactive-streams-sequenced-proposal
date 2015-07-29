@@ -39,4 +39,12 @@ public interface SequencedSubscription extends Subscription {
 }
 ```
 
-+ some type safety related subinterfaces of original API.
+Bonus:
+
+```java
+public interface KeyedMessage {
+    Object getKey();
+}
+```
+
+to enable last value caches (persistent/non persistent). Can be used for adaptive rate limiting ("netting"), reduced replay volume.
