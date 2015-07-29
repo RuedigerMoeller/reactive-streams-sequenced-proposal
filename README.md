@@ -1,10 +1,10 @@
 # reactive-streams-sequenced-proposal
 
-##Motivation
-- Subscribtion.request(..) pull messages become idempotent, which is important for distributed streaming as the original spec's credit-alike flow control creates distributed state (error prone)
+##Motivation of adding sequenced semantics
+- Subscription.request(..) becomes idempotent, which is important for distributed streaming as the original spec's credit-alike flow control creates distributed state (error prone)
 - as there is talk back from subscriber to publisher anyway, we can add ACK semantics allowing for guaranteed delivery, storage, retransmission, etc.
 
-These extension allow for implementing a sequencing wrapper, so strict RS 1.0 streams can be made sequenced for network transfer using an adapter implementation.
+These extension allow for implementing a sequencing wrapper, so RS 1.0 streams can be made sequenced using an adapter sequenced implementation.
 
 In case of acknowledged/guaranteed delivery or store-and-forward MQ patterns, clients are likely to interact with the sequenced stream API directly.
 
