@@ -19,8 +19,8 @@ public interface SequencedSubscription extends Subscription {
 
     /**
      * request next n messages, starting with the given sequence. If sequence is <= 0,
-     * start with the first available message. Sequences are expected to be strictly ordered (no gaps > 1),
-     * and > 0.
+     * start with the first available message. Sequences are expected to be strictly ordered and increment by 1,
+     * all sequences are expected to be > 0.
      *
      * Note this message implicitely acknowledges receive of 'startingSequence'. This means a buffering publisher
      * could delete buffered messages with a sequence of <= 'startingSequence'

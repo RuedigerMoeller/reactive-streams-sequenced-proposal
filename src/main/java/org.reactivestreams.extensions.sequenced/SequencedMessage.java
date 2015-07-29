@@ -29,6 +29,8 @@ public interface SequencedMessage {
 //    long sequence(long newSeq);
 
 
-    Object payload();
+    default Object payload() {
+        return this;
+    }
 
 }
