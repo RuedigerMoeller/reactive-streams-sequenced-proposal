@@ -4,7 +4,7 @@
 - Subscription.request(..) becomes idempotent, which is important for distributed streaming as the original spec's credit-alike flow control creates distributed state (error prone)
 - as there is talk back from subscriber to publisher anyway, we can add ACK semantics allowing for guaranteed delivery, storage, retransmission, etc.
 
-These extension allow for implementing a sequencing wrapper, so RS 1.0 streams can be made sequenced using an adapter sequenced implementation.
+These extensions enable implementation of a sequencing wrapper, so RS 1.0 streams can be made sequenced using an adapter implementation adding sequencing support under the hood.
 
 In case of acknowledged/guaranteed delivery or store-and-forward MQ patterns, clients are likely to interact with the sequenced stream API directly.
 
