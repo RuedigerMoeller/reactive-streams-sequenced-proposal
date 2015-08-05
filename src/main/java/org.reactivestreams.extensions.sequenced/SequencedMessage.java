@@ -9,7 +9,7 @@ package org.reactivestreams.extensions.sequenced;
 public interface SequencedMessage {
 
     /**
-     * Sequences are expected to be growing
+     * Sequences are expected to be growing by exactly 1
      *
      *
      * @return sequence of this message inside current stream.
